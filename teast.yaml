@@ -1,0 +1,270 @@
+src:
+  structure.yaml:
+    content: |-
+      世界3カ国の生成AI情報収集プロジェクト
+      - 世界主要3カ国（日本、米国、中国）の最新生成AI動向を調査するためのMarkdownテンプレート
+      - 研究目的の情報収集フレームワークを提供
+      - 地域横断的な分析と比較が可能な調査構造
+      - 調査結果を統合した解説文書とプレゼンテーション資料を含む
+      - すべての依存関係で処理完了を待機するよう設定
+      - 各タスク特性に最適なAIモデルを選定
+      
+      主要コンポーネント:
+      - 情報収集: 3カ国の生成AI最新情報のマークダウンファイル（research ディレクトリ内）
+      - 解説文書: 調査結果を統合したレポート（summary ディレクトリ内）
+      - プレゼンテーション: 調査結果をスライド形式で表現（presentation ディレクトリ内）
+    agent選定理由: gemini-2.0-flash-expはクラウドネイティブな高速推論と軽量な処理が得意で、情報収集フレームワークの設計に最適です。
+    dependency: []
+    dependency_wait: true
+    agent: "gemini-2.0-flash-exp"
+    api: []
+  research:
+    china_ai_trends.md:
+      content: |-
+        请用日语以Markdown格式撰写一份关于中国生成式人工智能最新趋势的调研报告。
+
+        请参考中国本地域名(.cn)和可靠的本地新闻网站（如：xinhuanet.com、people.com.cn）、政府机构网站（如：most.gov.cn）、大学网站（如：tsinghua.edu.cn、pku.edu.cn）、企业网站（如：baidu.com、alibaba.com）。
+
+        目录（每部分500-700字）：
+        1. 最新技术发展趋势
+        2. 主要企业和初创公司动态
+        3. 政府政策和监管情况
+        4. 教育和研究机构的举措
+        5. 未来展望和挑战
+
+        文风：客观、学术的调研报告格式
+
+        引用来源时，请按以下格式保留中文原文：
+        > "中文原文引用"
+        （日语翻译）
+      agent選定理由: gemini-2.0-flash-expは効率的な情報処理が得意で、中国のAI技術政策や企業動向に関する情報を適切に分析できます。
+      dependency: []
+      dependency_wait: true
+      agent: "gemini-2.0-flash-exp"
+      research: true
+      api: []
+    japan_ai_trends.md:
+      content: |-
+        日本の生成AIに関する最新動向についてMarkdown形式で日本語の調査レポートを執筆してください。
+
+        信頼できる日本のドメイン(.jp)や情報源を参照してください。例えば、政府機関のウェブサイト（digital.go.jp、meti.go.jp、nedo.go.jp）、大学サイト（u-tokyo.ac.jp、kyoto-u.ac.jp）、研究機関（aist.go.jp、riken.jp）、テクノロジーニュースサイトなど。
+
+        内容（各セクション500-700語）：
+        1. 最新技術開発動向
+        2. 主要企業とスタートアップの活動
+        3. 政府の政策と規制
+        4. 教育研究機関のイニシアチブ
+        5. 将来の展望と課題
+
+        スタイル：客観的かつ学術的な調査レポート形式
+
+        引用する場合は以下の形式で記載してください：
+        > "原文引用"
+      agent選定理由: gemini-2.0-flash-expは効率的な情報処理が得意で、日本のAI政策や企業動向を正確に把握しまとめることができます。
+      dependency: []
+      dependency_wait: true
+      agent: "gemini-2.0-flash-exp"
+      research: true
+      api: []
+    usa_ai_trends.md:
+      content: |-
+        Research and write a report in Japanese about the latest trends in generative AI in the United States in Markdown format.
+
+        Please refer to reliable U.S. sources including government websites (e.g., whitehouse.gov, nsf.gov, nist.gov), university sites (e.g., stanford.edu, mit.edu, cmu.edu), major research organizations (e.g., openai.com, anthropic.com), and tech news sites.
+
+        Contents (500-700 words per section):
+        1. Latest Technology Development Trends
+        2. Major Companies and Startup Activities
+        3. Government Policies and Regulations
+        4. Educational and Research Institution Initiatives
+        5. Future Prospects and Challenges
+
+        Style: Objective and academic research report format
+
+        When quoting sources, please maintain the original English text in the following format:
+        > "Original English quote"
+        (Japanese translation)
+      agent選定理由: gemini-2.0-flash-expは複数タスクの並列処理に優れており、アメリカの膨大なAI動向データを効率的に整理・分析できます。
+      dependency: []
+      dependency_wait: true
+      agent: "gemini-2.0-flash-exp"
+      research: true
+      api: []
+  presentation:
+
+    global_ai_trends_presentation.marp:
+      content: |-
+        - marpファイルの場合はMarp形式で出力してください
+        以下デザイン参考
+        ---
+        marp: true
+        theme: default
+        paginate: true
+        header: '**{title}**'
+        footer: '© 2024 AI Financial Innovation'
+        style: |
+          section {
+            background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+            color: #333;
+          }
+          h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #c5a572;
+          }
+          h2 {
+            color: #34495e;
+          }
+          strong {
+            color: #c5a572;
+          }
+        ---
+
+        # 世界3カ国の生成AI最新動向
+        ## プレゼンテーション資料
+
+        以下の内容で、3カ国（アメリカ、中国、日本）の生成AI最新動向をまとめたプレゼンテーション資料を作成してください。Marp形式（Markdownベースのプレゼンテーション）で、視覚的にわかりやすい資料にしてください。
+
+        ---
+
+        ## スライド構成（合計15-20枚程度）：
+
+        1. **タイトル・イントロダクション**（2枚）
+           - タイトル
+           - 概要と本調査の目的
+
+        2. **世界の生成AIトレンド概観**（3枚）
+           - グローバルな技術トレンド
+           - 地域間の主な違い
+           - 市場規模と成長予測
+
+        3. **各国別分析**（各国2枚×3カ国=6枚）
+           - 国別の主要トピック・特徴
+           - 強み・弱み・チャンス・脅威（SWOT分析）
+
+        4. **比較分析**（3枚）
+           - 技術開発状況の比較
+           - 政策・規制アプローチの比較
+           - 企業・スタートアップエコシステムの比較
+
+        5. **未来展望と提言**（3枚）
+           - 今後3年間の予測
+           - 国際協力の可能性
+           - 日本への戦略的示唆
+
+        6. **まとめ・参考資料**（2枚）
+           - 主要な結論
+           - 参考資料・謝辞
+      agent選定理由: gemini-2.0-flash-lite-preview-02-05はバックエンドの複雑な推論と創造的なタスクに強く、視覚的に魅力的なプレゼンテーションの作成に最適です。
+      dependency:
+        - src/research/china_ai_trends.md
+        - src/research/japan_ai_trends.md
+        - src/research/usa_ai_trends.md
+        - src/summary/country_comparison_table.md
+        - src/summary/global_ai_landscape.md
+      dependency_wait: true
+      agent: "claude-3-5-sonnet-20240620"
+      api: []
+
+  summary:
+    country_comparison_table.md:
+      content: |-
+        # 世界3カ国の生成AI比較一覧表
+
+        アメリカ、中国、日本の生成AI動向を簡潔に比較できる一覧表を作成してください。以下の項目について各国を横断的に比較し、一目で違いがわかるようにまとめてください。
+
+        ## 比較項目：
+
+        1. **技術開発**
+           - 主要技術分野・強み
+           - 特許出願数・論文数（概数）
+           - 特筆すべき技術的ブレークスルー
+
+        2. **企業・市場**
+           - 主要企業・スタートアップ数
+           - 投資規模（概算）
+           - 特徴的なビジネスモデル
+
+        3. **政策・規制**
+           - 重要政策・戦略
+           - 規制アプローチの特徴
+           - 公的投資規模（概算）
+
+        4. **研究・教育**
+           - 主要研究機関
+           - AI人材育成の取り組み
+           - 国際共同研究の状況
+
+        5. **課題と展望**
+           - 主な課題
+           - 今後の方向性
+           - 国際的な位置づけ
+
+        フォーマット：
+        - Markdownの表形式を使用
+        - 各項目は簡潔に（1セル30-50文字程度）
+        - 情報は最新のデータに基づくこと
+        - 国ごとの特徴を明確に区別すること
+      agent選定理由: gemini-2.0-flash-lite-preview-02-05は構造化データの整理と表現に優れており、複数国のAI動向を簡潔かつ明確に比較した表形式のレポート作成に適しています。
+      dependency:
+        - src/research/china_ai_trends.md
+        - src/research/japan_ai_trends.md
+        - src/research/usa_ai_trends.md
+      dependency_wait: true
+      agent: "claude-3-5-sonnet-20240620"
+      api: []
+    global_ai_landscape.md:
+      content: |-
+        # 世界3カ国の生成AI最新動向総合レポート
+
+        3カ国（アメリカ、中国、日本）の生成AI最新動向を比較分析し、グローバルな視点から解説するレポートを作成してください。
+
+        目次（各セクション1000-1500字）：
+        
+        ## 1. エグゼクティブサマリー
+        - 世界の生成AI動向の全体像
+        - 主要3カ国の特徴と位置づけ
+        - 重要な共通トレンドと地域差
+        
+        ## 2. 技術開発状況の国際比較
+        - 各国の技術的強み・弱み
+        - 特許・論文数の比較
+        - 主要研究分野と特化領域
+        
+        ## 3. 企業活動と市場動向
+        - 主要プレイヤーの国際展開状況
+        - 投資・資金調達状況の比較
+        - ビジネスモデルの地域特性
+        
+        ## 4. 政策・規制アプローチの違い
+        - 各国の規制哲学と特徴
+        - 国際協力と競争領域
+        - 政策が技術・市場に与える影響
+        
+        ## 5. 研究・教育エコシステム
+        - 高等教育・研究機関の役割比較
+        - 人材育成アプローチの違い
+        - 産学連携モデルの国際比較
+        
+        ## 6. 地政学的影響と未来展望
+        - 技術覇権競争の現状
+        - 倫理・安全保障上の課題
+        - 将来のグローバルAIエコシステム予測
+        
+        ## 7. 日本の立ち位置と戦略的提言
+        - 日本の強みと課題
+        - 他国から学ぶべき点
+        - 国際競争力強化のための提言
+
+        スタイル：
+        - 客観的かつ学術的な分析
+        - データと事例に基づく比較
+        - 図表を活用した視覚的説明
+        - 専門家向けの深い洞察と初心者にも理解しやすい説明の両立
+      agent選定理由: claude-3-7-sonnet-20250219は高度な推論能力と文章構成力を持ち、複数国のAI動向を詳細に比較分析した総合レポートの作成に最適です。
+      dependency:
+        - src/research/china_ai_trends.md
+        - src/research/japan_ai_trends.md
+        - src/research/usa_ai_trends.md
+      dependency_wait: true
+      agent: "gemini-2.0-flash-thinking-exp-01-21"
+      api: []

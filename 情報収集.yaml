@@ -1,0 +1,277 @@
+src:
+  structure.yaml:
+    content: |-
+      中国美少女ゲーム産業の歴史的発展と現状分析プロジェクト
+      - 中国本土における美少女ゲーム産業の発展過程と現状を調査
+      - 市場、規制、技術、文化的側面からの包括的な分析
+      - 歴史的変遷と将来展望を含む研究フレームワークを提供
+      - 調査結果を統合した解説文書とプレゼンテーション資料を含む
+      - すべての依存関係で処理完了を待機するよう設定
+      - 各タスク特性に最適なAIモデルを選定
+      
+      主要コンポーネント:
+      - 情報収集: 各時代区分における産業動向（research ディレクトリ内）
+      - 解説文書: 調査結果を統合したレポート（summary ディレクトリ内）
+      - プレゼンテーション: 産業分析をスライド形式で表現（presentation ディレクトリ内）
+    agent選定理由: gemini-2.0-flash-expは文化的コンテキストの理解と歴史的分析に優れており、産業調査フレームワークの設計に最適です。
+    dependency: []
+    dependency_wait: true
+    agent: "gemini-2.0-flash-exp"
+    api: []
+  research:
+    early_period.md:
+      content: |-
+        请用日语以Markdown格式撰写一份关于中国美少女游戏早期发展（1990-2010）的调研报告。
+
+        请参考以下信息来源：
+        - 中国游戏门户网站的历史档案（17173.com、游侠网等）
+        - 游戏公司的历史资料
+        - 相关学术研究和行业报告
+        - 早期从业者的回忆和采访
+
+        目录（每部分500-700字）：
+        1. 市场形成期的特征
+        2. 主要游戏作品分析
+        3. 技术与创作环境
+        4. 本土化与文化适应
+        5. 产业发展的困境
+
+        文风：客观、历史研究的叙述方式
+
+        引用来源时，请按以下格式保留中文原文：
+        > "中文原文引用"
+        （日语翻译）
+      agent選定理由: gemini-2.0-flash-expは歴史的文脈の理解と情報の時系列分析に優れています。
+      dependency: []
+      dependency_wait: true
+      agent: "gemini-2.0-flash-exp"
+      research: true
+      api: []
+    modern_period.md:
+      content: |-
+        请用日语以Markdown格式撰写一份关于中国美少女游戏现代发展（2010-2020）的调研报告。
+
+        参考信息来源：
+        - 游戏产业数据库（GameLook、CNG等）
+        - 上市公司财报和行业报告
+        - 开发者会议记录和演讲
+        - 用户社区和评论平台
+
+        目录（每部分500-700字）：
+        1. 市场规模与用户分析
+        2. 商业模式演变
+        3. 内容监管与政策适应
+        4. 技术创新与品质提升
+        5. 产业生态系统分析
+
+        文风：客观、分析性的研究报告
+
+        引用格式：
+        > "中文原文引用"
+        （日语翻译）
+      agent選定理由: gemini-2.0-flash-expは現代のデータ分析と市場動向の把握に長けています。
+      dependency: []
+      dependency_wait: true
+      agent: "gemini-2.0-flash-exp"
+      research: true
+      api: []
+    current_trends.md:
+      content: |-
+        请用日语以Markdown格式撰写一份关于中国美少女游戏最新发展（2020-现在）的调研报告。
+
+        信息来源：
+        - 实时市场数据和行业报告
+        - 开发者访谈和技术博客
+        - 政策文件和监管动态
+        - 用户行为研究和社区调查
+
+        目录（每部分500-700字）：
+        1. 最新市场动态
+        2. 技术与创新趋势
+        3. 内容创作与IP价值
+        4. 用户行为与社群文化
+        5. 未来发展方向
+
+        文风：前瞻性的分析报告格式
+
+        引用格式：
+        > "中文原文引用"
+        （日语翻译）
+      agent選定理由: gemini-2.0-flash-expはリアルタイムデータの分析と将来トレンドの予測に優れています。
+      dependency: []
+      dependency_wait: true
+      agent: "gemini-2.0-flash-exp"
+      research: true
+      api: []
+  presentation:
+    industry_analysis_presentation.marp:
+      content: |-
+        ---
+        marp: true
+        theme: default
+        paginate: true
+        header: '**中国美少女ゲーム産業分析**'
+        footer: '© 2024 Game Industry Research'
+        style: |
+          section {
+            background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+            color: #333;
+          }
+          h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #c5a572;
+          }
+          h2 {
+            color: #34495e;
+          }
+          strong {
+            color: #c5a572;
+          }
+        ---
+
+        # 中国美少女ゲーム産業の発展と展望
+        ## 1990年代から現在までの軌跡
+
+        以下の内容で、中国の美少女ゲーム産業の発展についてまとめたプレゼンテーション資料を作成してください。
+
+        ## スライド構成（合計15-20枚）：
+
+        1. **イントロダクション**（2枚）
+           - 産業概観
+           - 調査の目的と範囲
+
+        2. **歴史的発展**（3枚）
+           - 黎明期（1990-2000）
+           - 成長期（2000-2010）
+           - 転換期（2010-2020）
+
+        3. **産業分析**（6枚）
+           - 市場規模の推移
+           - ビジネスモデルの変遷
+           - 規制環境の変化
+           - 技術革新の歴史
+           - ユーザー層の変化
+           - コンテンツ傾向の分析
+
+        4. **現代の展開**（3枚）
+           - 最新の市場動向
+           - 技術とプラットフォーム
+           - グローバル展開の状況
+
+        5. **将来展望**（3枚）
+           - 市場予測
+           - 技術トレンド
+           - 課題と機会
+
+        6. **まとめ**（2枚）
+           - 主要な発見
+           - 参考資料
+
+      agent選定理由: claude-3-5-sonnet-20240620は産業分析の視覚化と歴史的文脈の表現に優れています。
+      dependency:
+        - src/research/early_period.md
+        - src/research/modern_period.md
+        - src/research/current_trends.md
+        - src/summary/historical_analysis.md
+        - src/summary/market_analysis.md
+      dependency_wait: true
+      agent: "claude-3-5-sonnet-20240620"
+      api: []
+
+  summary:
+    historical_analysis.md:
+      content: |-
+        # 中国美少女ゲーム産業の歴史的分析
+
+        中国における美少女ゲーム産業の発展を時系列で分析し、各時代の特徴と変遷を明らかにします。
+
+        目次（各セクション1000-1500字）：
+
+        ## 1. 黎明期（1990年代）
+        - 市場形成の背景
+        - 初期の作品と特徴
+        - 技術的制約と創意工夫
+
+        ## 2. 成長期（2000年代）
+        - 市場拡大の要因
+        - 主要企業の台頭
+        - 技術革新の影響
+
+        ## 3. 転換期（2010年代）
+        - ビジネスモデルの変革
+        - 規制環境の変化
+        - プラットフォームの多様化
+
+        ## 4. 現代（2020年以降）
+        - 最新の市場動向
+        - 技術革新の現状
+        - グローバル展開の状況
+
+        ## 5. 産業構造の変遷
+        - プレイヤーの変化
+        - 収益モデルの進化
+        - 制作プロセスの変化
+
+        ## 6. 文化的影響の分析
+        - ユーザー層の変化
+        - コンテンツの変遷
+        - 社会的受容の変化
+
+        スタイル：
+        - 歴史研究の手法に基づく客観的分析
+        - 具体的な事例とデータの活用
+        - 文化的・社会的コンテキストの考慮
+      agent選定理由: claude-3-7-sonnet-20250219は長期的な歴史分析と文化的文脈の理解に優れています。
+      dependency:
+        - src/research/early_period.md
+        - src/research/modern_period.md
+        - src/research/current_trends.md
+      dependency_wait: true
+      agent: "gemini-2.0-flash-thinking-exp-01-21"
+      api: []
+    market_analysis.md:
+      content: |-
+        # 中国美少女ゲーム市場の総合分析
+
+        各時代の市場データを統合し、産業としての特徴と発展パターンを分析します。
+
+        ## 分析項目（各セクション500-700字）：
+
+        1. **市場規模の推移**
+           - 売上高の変遷
+           - ユーザー数の推移
+           - 主要作品の販売実績
+
+        2. **ビジネスモデルの分析**
+           - 収益構造の変化
+           - 課金モデルの進化
+           - 配信プラットフォームの影響
+
+        3. **プレイヤー分析**
+           - 主要企業の変遷
+           - 新規参入の動向
+           - 競争環境の変化
+
+        4. **技術進化の影響**
+           - 開発環境の変化
+           - 表現技術の進歩
+           - プラットフォームの多様化
+
+        5. **規制環境の影響**
+           - 政策変更の影響
+           - 業界の自主規制
+           - グローバル展開への影響
+
+        フォーマット：
+        - データに基づく客観的分析
+        - 図表を用いた視覚的説明
+        - トレンドの定量的把握
+
+      agent選定理由: claude-3-7-sonnet-20250219は市場データの分析と可視化に優れています。
+      dependency:
+        - src/research/early_period.md
+        - src/research/modern_period.md
+        - src/research/current_trends.md
+      dependency_wait: true
+      agent: "claude-3-5-sonnet-20240620"
+      api: []
